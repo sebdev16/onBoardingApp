@@ -15,7 +15,7 @@ fun NavManager()
 {
     val  context= LocalContext.current
     val dataStore= StoreBoarding(context)
-    val store=dataStore.getStoreBoarding.collectAsState(initial = false) //
+    val store=dataStore.getStoreBoarding.collectAsState(initial = false)
     
     val navController= rememberNavController()
     NavHost(navController = navController, startDestination = if(store.value==true) "home" else "onBoarding")
